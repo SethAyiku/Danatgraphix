@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Graphix</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== Global ===== */
+body {
+  background: #111; /* slightly brighter than pure black */
+  color: #fff;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.8); /* charcoal instead of black */
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* ===== Hero ===== */
+.hero {
+  width: 100%;
+  min-height: 500px;
+  background-image: 
+    linear-gradient(rgba(20,20,20,0.5), rgba(20,20,20,0.5)), /* soft dark overlay */
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1650&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+/* ===== Cards & Services ===== */
+.card, .service, #paymentBox, #bookingBox {
+  background: rgba(50,50,50,0.85); /* soft charcoal, not pure black */
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover, .service:hover {
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5); /* bright accent shadow */
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #1a1a1a; /* brighter than pure black */
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 12px 30px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff4f81, #ff8c42); /* brighter, warmer gradient */
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 143, 80, 0.6);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h2>Daniel Graphix</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#portfolio">Work</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#booking">Book</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Daniel Graphix</h1>
+  <p>Creative Designer & Visual Storyteller</p>
+  <button class="btn" onclick="scrollToSection('portfolio')">View Work</button>
+  <button class="btn" onclick="scrollToSection('pricing')">Hire Me</button>
+</div>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a passionate graphic designer specializing in branding, logo design, and digital creativity. I create designs that speak and connect with audiences.</p>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio">
+  <h2>My Work</h2>
+  <div class="portfolio">
+    <div class="card">Logo Design Project</div>
+    <div class="card">Brand Identity</div>
+    <div class="card">Social Media Design</div>
+    <div class="card">Poster Design</div>
+  </div>
+</section>
+
+<!-- Services -->
+<section>
+  <h2>Services</h2>
+  <div class="services">
+    <div class="service">Logo Design</div>
+    <div class="service">Branding</div>
+    <div class="service">Social Media Design</div>
+    <div class="service">Print Design</div>
+  </div>
+</section>
+
+<!-- Pricing & Payment -->
+<section id="pricing">
+  <h2>Pricing & Payment</h2>
+  <div class="services">
+
+    <div class="service">
+      <h3>Logo Design</h3>
+      <p>GHS 150</p>
+      <button class="btn" onclick="showPayment()">Pay Now</button>
+    </div>
+
+    <div class="service">
+      <h3>Brand Identity</h3>
+      <p>GHS 300</p>
+      <button class="btn" onclick="showPayment()">Pay Now</button>
+    </div>
+
+    <div class="service">
+      <h3>Social Media Design</h3>
+      <p>GHS 100</p>
+      <button class="btn" onclick="showPayment()">Pay Now</button>
+    </div>
+
+    <div class="service">
+      <h3>Poster Design</h3>
+      <p>GHS 80</p>
+      <button class="btn" onclick="showPayment()">Pay Now</button>
+    </div>
+
+  </div>
+
+  <div id="paymentBox">
+    <h3>Make Payment</h3>
+
+    <p><strong>MTN MoMo:</strong><br>
+    0549139703<br>
+    NAATEY DANIEL TETTEH</p>
+
+    <p><strong>Vodafone Cash:</strong><br>
+    0502199143<br>
+    RICHARD AFRIYIE OSEI</p>
+
+    <p>After payment, click below:</p>
+    <button class="btn" onclick="confirmPayment()">I Have Paid</button>
+  </div>
+</section>
+
+<!-- Booking Section -->
+<section id="booking">
+  <h2>Book Your Design</h2>
+
+  <input type="text" id="clientName" placeholder="Your Name">
+  <input type="tel" id="clientPhone" placeholder="Your Phone Number">
+
+  <select id="clientDesign">
+    <option value="">Select Design</option>
+    <option value="Logo Design - GHS150">Logo Design - GHS150</option>
+    <option value="Brand Identity - GHS300">Brand Identity - GHS300</option>
+    <option value="Social Media Design - GHS100">Social Media Design - GHS100</option>
+    <option value="Poster Design - GHS80">Poster Design - GHS80</option>
+  </select>
+
+  <button class="btn" onclick="showBookingPayment()">Proceed to Payment</button>
+
+  <div id="bookingBox">
+    <h3>Make Payment</h3>
+    <p><strong>MTN MoMo:</strong><br>0549139703<br>NAATEY DANIEL TETTEH</p>
+    <p><strong>Vodafone Cash:</strong><br>0502199143<br>RICHARD AFRIYIE OSEI</p>
+    <p>After payment, click below:</p>
+    <button class="btn" onclick="confirmBooking()">I Have Paid</button>
+  </div>
+
+  <div id="bookingResult" style="margin-top:20px;"></div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea placeholder="Your Message"></textarea>
+  <button class="btn">Send Message</button>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Daniel Graphix. All rights reserved.</p>
+</footer>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({behavior: "smooth"});
+}
+
+/* Pricing payment */
+function showPayment() {
+  document.getElementById("paymentBox").style.display = "block";
+  document.getElementById("paymentBox").scrollIntoView({behavior: "smooth"});
+}
+
+function confirmPayment() {
+  alert("Payment received! I will contact you shortly. Thank you 🙌");
+}
+
+/* Booking payment */
+function showBookingPayment() {
+  let name = document.getElementById("clientName").value;
+  let phone = document.getElementById("clientPhone").value;
+  let design = document.getElementById("clientDesign").value;
+
+  if (!name || !phone || !design) {
+    alert("Please fill all details to proceed to payment.");
+    return;
+  }
+
+  document.getElementById("bookingBox").style.display = "block";
+  document.getElementById("bookingBox").scrollIntoView({behavior: "smooth"});
+}
+
+function confirmBooking() {
+  let name = document.getElementById("clientName").value;
+  let phone = document.getElementById("clientPhone").value;
+  let design = document.getElementById("clientDesign").value;
+
+  document.getElementById("bookingResult").innerHTML = `
+    <h3>✅ Booking Confirmed</h3>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Phone:</strong> ${phone}</p>
+    <p><strong>Design:</strong> ${design}</p>
+    <p>Payment will be verified manually. I will contact you shortly.</p>
+  `;
+}
+</script>
+
+</body>
+</html>
