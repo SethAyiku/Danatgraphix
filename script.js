@@ -83,7 +83,7 @@ function showBookingPayment() {
 
     // Launch Paystack
     let handler = PaystackPop.setup({
-        key: 'pk_test_0e7b9673fcdad06c4f9c3dda9fa02a80144be668',
+        key: 'pk_live_5f2795d8b624f5f369285017bc63dc2dcb7f119d',
         email: email,
         amount: amount * 100,
         currency: 'GHS',
