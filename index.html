@@ -1,215 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DanatGraphix</title>
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DanatGraphix — Creative Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <div class="logo">
-    <img src="images/logo.png" width="150">
-  </div>
-  <div class="links">
-    <a href="#about">About</a>
-    <a href="#portfolio">Work</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#booking">Book</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <!-- ── Nav ──────────────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="Danat Graphix">
+    </a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#portfolio">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="nav-cta">Hire Me</a>
+    </div>
+  </nav>
 
-<div class="hero">
-  <div class="hero-badge">✦ Creative Designer ✦ Visual Storyteller</div>
-  <h1>Design that<br><em>speaks</em> volumes</h1>
-  <p>Bold branding, striking logos, and digital creativity that connects with your audience and makes them remember you.</p>
-  <div class="hero-btns">
-    <button id="view-portfolio">View My Work </button>
-    <button class="btn btn-outline" onclick="scrollToSection('pricing')">Hire Me</button>
-  </div>
-</div>
 
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker">
-    <span>Logo Design</span><span>Brand Identity</span><span>Social Media</span><span>Poster Design</span>
-    <span>Visual Storytelling</span><span>Print Design</span><span>Branding</span><span>Creative Direction</span>
-    <span>Logo Design</span><span>Brand Identity</span><span>Social Media</span><span>Poster Design</span>
-    <span>Visual Storytelling</span><span>Print Design</span><span>Branding</span><span>Creative Direction</span>
-  </div>
-</div>
-
-<section id="about">
-  <div class="about-visual">🎨</div>
-  <div>
-    <div class="section-label">About Me</div>
-    <h2 class="section-title">Turning ideas into<br>visual magic</h2>
-    <p style="color:var(--muted);line-height:1.8;font-size:1.02rem;">I'm Daniel, a passionate graphic designer specializing in branding, logo design, and digital creativity. I craft designs that don't just look good — they connect with audiences and tell your story with clarity and confidence.</p>
-    <div class="about-stats">
-      <div class="stat"><div class="num">50+</div><div class="lbl">Projects Completed</div></div>
-      <div class="stat"><div class="num">30+</div><div class="lbl">Happy Clients</div></div>
-      <div class="stat"><div class="num">4+</div><div class="lbl">Years Experience</div></div>
-      <div class="stat"><div class="num">100%</div><div class="lbl">Satisfaction Rate</div></div>
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <div class="hero">
+    <div style="position:relative;z-index:1;">
+      <div class="hero-badge">✦ Creative Designer &nbsp;·&nbsp; Visual Storyteller</div>
+      <h1>Design that<br><em>speaks</em> volumes</h1>
+      <p>Bold branding, striking logos, and digital creativity that connects with your audience and makes them remember you.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="scrollToSection('portfolio')">View My Work →</button>
+        <button class="btn btn-outline" onclick="scrollToSection('pricing')">See Pricing</button>
+      </div>
     </div>
   </div>
-</section>
 
-<section id="portfolio" style="padding-top:0">
-  <div style="text-align:center">
-    <div class="section-label" style="justify-content:center">My Work</div>
-    <h2 class="section-title">Selected Projects</h2>
+
+  <!-- ── Ticker ────────────────────────────────────────────────────── -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span>Logo Design</span><span>Brand Identity</span><span>Social Media</span><span>Poster Design</span>
+      <span>Visual Storytelling</span><span>Print Design</span><span>Branding</span><span>Creative Direction</span>
+      <span>Logo Design</span><span>Brand Identity</span><span>Social Media</span><span>Poster Design</span>
+      <span>Visual Storytelling</span><span>Print Design</span><span>Branding</span><span>Creative Direction</span>
+    </div>
   </div>
-  <div class="portfolio-grid">
 
-    <div class="card">
-      <div class="card-thumb">
-        <!-- Replace "your-image-1.jpg" with your actual image file path or URL -->
-        <img src="images/img1.jpg" alt="Logo Design Project">
+
+  <!-- ── About ─────────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="about-visual">
+      <img src="images/daniel.jpg" alt="Daniel">
+    </div>
+    <div class="about-text">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Turning ideas into<br>visual magic</h2>
+      <p>I'm Daniel, a passionate graphic designer specializing in branding, logo design, and digital creativity. I craft designs that don't just look good — they connect with audiences and tell your story with clarity and confidence.</p>
+      <div class="about-stats">
+        <div class="stat"><div class="num">50+</div><div class="lbl">Projects Completed</div></div>
+        <div class="stat"><div class="num">30+</div><div class="lbl">Happy Clients</div></div>
+        <div class="stat"><div class="num">4+</div><div class="lbl">Years Experience</div></div>
+        <div class="stat"><div class="num">100%</div><div class="lbl">Satisfaction Rate</div></div>
       </div>
-      <div class="card-body">
-        <h3>Fresh Eggs flyer</h3>
-        <p>Designed a vibrant sales flyer for a fresh eggs supplier, highlighting delivery services across Accra with a bold, eye-catching layout.</p>
-        <span class="card-tag">Flyer Design</span>
+    </div>
+  </section>
+
+
+  <!-- ── Portfolio ─────────────────────────────────────────────────── -->
+  <section id="portfolio" style="padding-top:0">
+    <div class="portfolio-header">
+      <div class="section-label">My Work</div>
+      <h2 class="section-title">Selected Projects</h2>
+    </div>
+    <div class="portfolio-grid">
+
+      <div class="card">
+        <div class="card-thumb">
+          <img src="images/img1.jpg" alt="Fresh Eggs Flyer">
+        </div>
+        <div class="card-body">
+          <h3>Fresh Eggs Flyer</h3>
+          <p>Designed a vibrant sales flyer for a fresh eggs supplier, highlighting delivery services across Accra with a bold, eye-catching layout.</p>
+          <span class="card-tag">Flyer Design</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-thumb">
+          <img src="images/img2.jpg" alt="Fashion Home">
+        </div>
+        <div class="card-body">
+          <h3>Fashion Home</h3>
+          <p>Created a professional services flyer for a fashion brand showcasing their native wear, senator, and formal wear collections.</p>
+          <span class="card-tag">Branding</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-thumb">
+          <img src="images/img3.jpg" alt="Church Event">
+        </div>
+        <div class="card-body">
+          <h3>Church / Event</h3>
+          <p>Designed a bold event graphic featuring speakers for a church programme — striking typography and portrait layouts that command attention.</p>
+          <span class="card-tag">Event Design</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-thumb">
+          <img src="images/img4.jpg" alt="Food Business">
+        </div>
+        <div class="card-body">
+          <h3>Food Business</h3>
+          <p>Crafted a colourful promotional flyer for a daily meals and catering business, clearly communicating their menu and delivery offer.</p>
+          <span class="card-tag">Business</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── Services ──────────────────────────────────────────────────── -->
+  <section id="services-section">
+    <div class="section-label">What I Do</div>
+    <h2 class="section-title">Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <div class="icon"><img src="images/logo_design (1).png" alt="Logo Design"></div>
+        <h3>Logo Design</h3>
+        <p>Memorable marks that capture your brand essence at a glance.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img src="images/branding.png" alt="Branding"></div>
+        <h3>Branding</h3>
+        <p>Full brand systems — colors, fonts, voice, and visual language.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img src="images/post.png" alt="Social Media"></div>
+        <h3>Social Media</h3>
+        <p>Scroll-stopping content designed to grow your online presence.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img src="images/print_design.png" alt="Print Design"></div>
+        <h3>Print Design</h3>
+        <p>Flyers, banners, and posters that demand attention in the real world.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── Pricing ───────────────────────────────────────────────────── -->
+  <section id="pricing">
+    <div class="pricing-header">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Simple, clear pricing</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-icon">✏️</div>
+        <h3>Logo Design</h3>
+        <div class="amount">GHS 150</div>
+        <button class="btn btn-sm btn-primary" onclick="showPayment()">Pay Now</button>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Popular</div>
+        <div class="price-icon">🎯</div>
+        <h3>Brand Identity</h3>
+        <div class="amount">GHS 300</div>
+        <button class="btn btn-sm btn-outline" style="border-color:#fff;color:#fff;" onclick="showPayment()">Pay Now</button>
+      </div>
+      <div class="price-card">
+        <div class="price-icon">📱</div>
+        <h3>Social Media</h3>
+        <div class="amount">GHS 100</div>
+        <button class="btn btn-sm btn-primary" onclick="showPayment()">Pay Now</button>
+      </div>
+      <div class="price-card">
+        <div class="price-icon">🖨️</div>
+        <h3>Poster Design</h3>
+        <div class="amount">GHS 80</div>
+        <button class="btn btn-sm btn-primary" onclick="showPayment()">Pay Now</button>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-thumb">
-        <!-- Replace "your-image-2.jpg" with your actual image file path or URL -->
-        <img src="images/img2.jpg" alt="Brand Identity">
+    <div id="paymentBox">
+      <h3>💳 Make Payment</h3>
+      <div class="payment-method">
+        <div class="pm-label">MTN MoMo</div>
+        <div class="pm-number">0549 139 703</div>
+        <div class="pm-name">NAATEY DANIEL TETTEH</div>
       </div>
-      <div class="card-body">
-        <h3>Fashion Home</h3>
-        <p>Created a professional services flyer for a fashion brand showcasing their native wear, senator, and formal wear collections.</p>
-        <span class="card-tag">Branding</span>
+      <div class="payment-method">
+        <div class="pm-label">Vodafone Cash</div>
+        <div class="pm-number">0502 199 143</div>
+        <div class="pm-name">RICHARD AFRIYIE OSEI</div>
+      </div>
+      <p style="margin:20px 0 16px; color:var(--muted); font-size:0.9rem">After sending payment, click below to confirm.</p>
+      <button class="btn btn-primary" onclick="confirmPayment()">✅ I Have Paid</button>
+    </div>
+  </section>
+
+
+  <!-- ── Booking ───────────────────────────────────────────────────── -->
+  <section id="booking">
+    <div class="booking-header">
+      <div class="section-label">Book a Project</div>
+      <h2 class="section-title">Let's work together</h2>
+    </div>
+    <div class="booking-form">
+      <input type="text"  id="clientName"  placeholder="Your Name">
+      <input type="tel"   id="clientPhone" placeholder="Phone Number">
+      <select id="clientDesign" class="full">
+        <option value="">Select a Design Service</option>
+        <option value="Logo Design – GHS150">Logo Design – GHS150</option>
+        <option value="Brand Identity – GHS300">Brand Identity – GHS300</option>
+        <option value="Social Media Design – GHS100">Social Media Design – GHS100</option>
+        <option value="Poster Design – GHS80">Poster Design – GHS80</option>
+      </select>
+      <div class="submit-row">
+        <button class="btn btn-primary" onclick="showBookingPayment()">Proceed to Payment →</button>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-thumb">
-        <!-- Replace "your-image-3.jpg" with your actual image file path or URL -->
-        <img src="images/img3.jpg" alt="Social Media Design">
+    <div id="bookingBox">
+      <h3>💳 Make Payment</h3>
+      <div class="payment-method">
+        <div class="pm-label">MTN MoMo</div>
+        <div class="pm-number">0549 139 703</div>
+        <div class="pm-name">NAATEY DANIEL TETTEH</div>
       </div>
-      <div class="card-body">
-        <h3>Church/Event</h3>
-        <p>Designed a bold event graphic featuring speakers for a church programme — striking typography and portrait layouts that command attention.</p>
-        <span class="card-tag">Event Design</span>
+      <div class="payment-method">
+        <div class="pm-label">Vodafone Cash</div>
+        <div class="pm-number">0502 199 143</div>
+        <div class="pm-name">RICHARD AFRIYIE OSEI</div>
       </div>
+      <p style="margin:16px 0; color:var(--muted); font-size:0.88rem">After paying, click to confirm your booking.</p>
+      <button class="btn btn-primary" onclick="confirmBooking()">✅ Confirm Booking</button>
     </div>
 
-    <div class="card">
-      <div class="card-thumb">
-        <!-- Replace "your-image-4.jpg" with your actual image file path or URL -->
-        <img src="images/img4.jpg" alt="Poster Design">
-      </div>
-      <div class="card-body">
-        <h3>Food Business</h3>
-        <p>Crafted a colourful promotional flyer for a daily meals and catering business, clearly communicating their menu and delivery offer.</p>
-        <span class="card-tag">Business</span>
+    <div id="bookingResult"></div>
+  </section>
+
+
+  <!-- ── Contact ───────────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="contact-header">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Say hello 👋</h2>
+    </div>
+    <div class="contact-form">
+      <input type="text"  placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea class="full" rows="5" placeholder="Tell me about your project..."></textarea>
+      <div class="submit-row">
+        <button class="btn btn-primary" onclick="sendEmail()">Send Message →</button>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
 
-<section id="services-section" style="max-width:1120px;padding:80px 60px">
-  <div class="section-label">What I Do</div>
-  <h2 class="section-title">Services</h2>
-  <div class="services-grid">
-    <div class="service">
-      <div class="icon">
-        <img src="images/logo_design (1).png">
-      </div>
-      <h3>Logo Design</h3>
-      <p>Memorable marks that capture your brand essence at a glance.</p>
-    </div>
-    <div class="service">
-      <div class="icon">
-        <img src="images/branding.png">
-      </div>
-      <h3>Branding</h3>
-      <p>Full brand systems — colors, fonts, voice, and visual language.</p>
-    </div>
-    <div class="service">
-      <div class="icon">
-      <img src="images/post.png">
-      </div>
-      <h3>Social Media</h3>
-      <p>Scroll-stopping content designed to grow your online presence.</p>
-    </div>
-    <div class="service">
-      <div class="icon">
-      <img src="images/print_design.png">
-      </div>
-      <h3>Print Design</h3>
-      <p>Flyers, banners, and posters that demand attention in the real world.</p>
-    </div>
-  </div>
-</section>
+  <!-- ── Footer ────────────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2026 <strong>DanatGraphix</strong>. All rights reserved. Crafted with ❤️ in Ghana.</p>
+  </footer>
 
-<section id="pricing">
-  <div style="text-align:center">
-    <div class="section-label" style="justify-content:center">Pricing</div>
-    <h2 class="section-title">Simple, clear pricing</h2>
-  </div>
-  <div class="pricing-grid">
-    <div class="price-card"><div class="price-icon">✏️</div><h3>Logo Design</h3><div class="amount">GHS 150</div><button class="btn btn-sm btn-pay" onclick="showPayment()">Pay Now</button></div>
-    <div class="price-card featured"><div class="price-icon">🎯</div><h3>Brand Identity</h3><div class="amount">GHS 300</div><button class="btn btn-sm btn-pay" onclick="showPayment()">Pay Now</button></div>
-    <div class="price-card"><div class="price-icon">📱</div><h3>Social Media</h3><div class="amount">GHS 100</div><button class="btn btn-sm btn-pay" onclick="showPayment()">Pay Now</button></div>
-    <div class="price-card"><div class="price-icon">🖨️</div><h3>Poster Design</h3><div class="amount">GHS 80</div><button class="btn btn-sm btn-pay" onclick="showPayment()">Pay Now</button></div>
-  </div>
-  <div id="paymentBox">
-    <h3>💳 Make Payment</h3>
-    <div class="payment-method"><div class="pm-label">MTN MoMo</div><div class="pm-number">0549 139 703</div><div class="pm-name">NAATEY DANIEL TETTEH</div></div>
-    <div class="payment-method"><div class="pm-label">Vodafone Cash</div><div class="pm-number">0502 199 143</div><div class="pm-name">RICHARD AFRIYIE OSEI</div></div>
-    <p style="margin:20px 0 16px;color:var(--muted);font-size:0.9rem">After sending payment, click below to confirm.</p>
-    <button class="btn btn-primary" onclick="confirmPayment()">✅ I Have Paid</button>
-  </div>
-</section>
-
-<section id="booking">
-  <div class="section-label" style="justify-content:center">Book a Project</div>
-  <h2 class="section-title" style="text-align:center">Let's work together</h2>
-  <div class="booking-form">
-    <input type="text" id="clientName" placeholder="Your Name">
-    <input type="tel" id="clientPhone" placeholder="Phone Number">
-    <select id="clientDesign" class="full">
-      <option value="">Select a Design Service</option>
-      <option value="Logo Design – GHS150">Logo Design – GHS150</option>
-      <option value="Brand Identity – GHS300">Brand Identity – GHS300</option>
-      <option value="Social Media Design – GHS100">Social Media Design – GHS100</option>
-      <option value="Poster Design – GHS80">Poster Design – GHS80</option>
-    </select>
-    <div class="submit-row"><button class="btn btn-primary" onclick="showBookingPayment()">Proceed to Payment →</button></div>
-  </div>
-  <div id="bookingBox">
-    <h3 style="font-family:'Syne',sans-serif;font-weight:800;margin-bottom:20px">💳 Make Payment</h3>
-    <div class="payment-method"><div class="pm-label">MTN MoMo</div><div class="pm-number">0549 139 703</div><div class="pm-name">NAATEY DANIEL TETTEH</div></div>
-    <div class="payment-method"><div class="pm-label">Vodafone Cash</div><div class="pm-number">0502 199 143</div><div class="pm-name">RICHARD AFRIYIE OSEI</div></div>
-    <p style="margin:16px 0;color:var(--muted);font-size:0.88rem">After paying, click to confirm your booking.</p>
-    <button class="btn btn-primary" onclick="confirmBooking()">✅ Confirm Booking</button>
-  </div>
-  <div id="bookingResult"></div>
-</section>
-
-<section id="contact" style="margin:0 auto 60px">
-  <div class="section-label" style="justify-content:center">Get In Touch</div>
-  <h2 class="section-title" style="text-align:center">Say hello 👋</h2>
-  <div class="contact-form">
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea class="full" rows="5" placeholder="Tell me about your project..."></textarea>
-    <div class="submit-row"><button class="btn btn-primary">Send Message →</button></div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 <strong>Daniel Graphix</strong>. All rights reserved. Crafted with ❤️ in Ghana.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
