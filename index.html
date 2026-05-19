@@ -170,7 +170,9 @@
         <div class="price-body">
             <h3>Logo Design</h3>
             <div class="amount">GHS 150</div>
-            <button class="btn btn-sm btn-primary" onclick="showPayment()">Pay Now</button>
+            <button class="btn btn-sm btn-primary" onclick="selectService('Logo Design – GHS150', 150)">Pay Now</button>
+
+
         </div>
       </div>
       
@@ -182,7 +184,9 @@
         <div class="price-body">
             <h3>Brand Identity</h3>
             <div class="amount">GHS 300</div>
-            <button class="btn btn-sm btn-primary" onclick="showPayment()">Pay Now</button>
+            <button class="btn btn-sm btn-primary" onclick="selectService('Brand Identity – GHS300', 300)">Pay Now</button>
+
+
         </div>
       </div>
       
@@ -193,7 +197,9 @@
         <div class="price-body">
             <h3>Social Media</h3>
             <div class="amount">GHS 100</div>
-            <button class="btn btn-sm btn-primary" onclick="showPayment()">Pay Now</button>
+            <button class="btn btn-sm btn-primary" onclick="selectService('Social Media Design – GHS100', 100)">Pay Now</button>
+
+
         </div>
       </div>
       
@@ -204,7 +210,7 @@
         <div class="price-body">
             <h3>Poster Design</h3>
             <div class="amount">GHS 80</div>
-            <button class="btn btn-sm btn-primary" onclick="showPayment()">Pay Now</button>
+            <button class="btn btn-sm btn-primary" onclick="selectService('Poster Design – GHS80', 80)">Pay Now</button>
         </div>
       </div>
     </div>
@@ -235,14 +241,15 @@
     </div>
     <div class="booking-form">
       <input type="text"  id="clientName"  placeholder="Your Name">
-      <input type="tel"   id="clientPhone" placeholder="Phone Number">
+      <input type="email"   id="clientEmail" placeholder="Your Email">
       <select id="clientDesign" class="full">
-        <option value="">Select a Design Service</option>
-        <option value="Logo Design – GHS150">Logo Design – GHS150</option>
-        <option value="Brand Identity – GHS300">Brand Identity – GHS300</option>
-        <option value="Social Media Design – GHS100">Social Media Design – GHS100</option>
-        <option value="Poster Design – GHS80">Poster Design – GHS80</option>
+          <option value="">Select a Design Service</option>
+          <option value="Logo Design – GHS150">Logo Design – GHS150</option>
+          <option value="Brand Identity – GHS300">Brand Identity – GHS300</option>
+          <option value="Social Media Design – GHS100">Social Media Design – GHS100</option>
+          <option value="Poster Design – GHS80">Poster Design – GHS80</option>
       </select>
+      
       <div class="submit-row">
         <button class="btn btn-primary" onclick="showBookingPayment()">Proceed to Payment →</button>
       </div>
@@ -270,19 +277,26 @@
 
   <!-- ── Contact ───────────────────────────────────────────────────── -->
   <section id="contact">
-    <div class="contact-header">
-      <div class="section-label">Get In Touch</div>
-      <h2 class="section-title">Say hello 👋</h2>
+  <div class="contact-header">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Say hello 👋</h2>
+  </div>
+
+  <div class="contact-form">
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+
+    <textarea class="full" rows="5"
+      placeholder="Tell me about your project..."></textarea>
+    <div class="submit-row">
+      <button id="sendBtn" class="btn btn-primary" onclick="sendEmail()">
+        <span id="btnText">Send Message →</span>
+        <span id="loader"></span>
+      </button>
     </div>
-    <div class="contact-form">
-      <input type="text"  placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea class="full" rows="5" placeholder="Tell me about your project..."></textarea>
-      <div class="submit-row">
-        <button class="btn btn-primary" onclick="sendEmail()">Send Message →</button>
-      </div>
-    </div>
-  </section>
+    
+  </div>
+</section>
 
 
   <!-- ── Footer ────────────────────────────────────────────────────── -->
@@ -291,6 +305,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
