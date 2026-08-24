@@ -131,7 +131,7 @@ function confirmBooking(paymentRef) {
 // ─── EmailJS: Contact Form ────────────────────────────────────────────────────
 function sendEmail() {
 
-  emailjs.init("OFDjJwCpXgUr5qhY9");
+  emailjs.init("tBAENHBEwpBrD1md7");
 
   const btn = document.getElementById("sendBtn");
   const loader = document.getElementById("loader");
