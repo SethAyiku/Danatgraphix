@@ -4,6 +4,29 @@ function scrollToSection(id) {
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
+function openWorkModal(card) {
+    const modal = document.getElementById('workModal');
+    const modalImage = document.getElementById('workModalImage');
+
+    if (!modal || !modalImage) return;
+
+    const firstImg = card.querySelector('img');
+    const title = card.dataset.title || card.querySelector('h3')?.textContent || 'Project';
+
+    modalImage.src = firstImg ? firstImg.src : '';
+    modalImage.alt = title;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeWorkModal() {
+    const modal = document.getElementById('workModal');
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
 
 // ─── Navbar Shadow on Scroll ─────────────────────────────────────────────────
 window.addEventListener('scroll', () => {
@@ -41,6 +64,39 @@ function selectService(serviceName, amount) {
 function confirmPayment() {
   alert('🎉 Payment received! Daniel will contact you shortly. Thank you!');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card) => {
+        card.addEventListener('click', () => openWorkModal(card));
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openWorkModal(card);
+            }
+        });
+    });
+
+    const modal = document.getElementById('workModal');
+    if (modal) {
+        modal.addEventListener('click', (event) => {
+            if (event.target instanceof HTMLElement && event.target.dataset.closeModal === 'true') {
+                closeWorkModal();
+            }
+        });
+
+        const closeButton = modal.querySelector('.work-modal-close');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeWorkModal);
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('open')) {
+                closeWorkModal();
+            }
+        });
+    }
+});
 
 
 // ─── Booking: Validate → Show Payment Box ────────────────────────────────────

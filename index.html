@@ -79,7 +79,7 @@
     </div>
     <div class="portfolio-grid">
 
-      <div class="card">
+      <div class="card" tabindex="0" role="button" aria-label="View Fresh Eggs Flyer details" data-title="Fresh Eggs Flyer" data-tag="Flyer Design" data-description="Designed a vibrant sales flyer for a fresh eggs supplier, highlighting delivery services across Accra with a bold, eye-catching layout.">
         <div class="card-thumb">
           <img src="images/img1.jpg" alt="Fresh Eggs Flyer">
         </div>
@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" tabindex="0" role="button" aria-label="View Fashion Home details" data-title="Fashion Home" data-tag="Branding" data-description="Created a professional services flyer for a fashion brand showcasing their native wear, senator, and formal wear collections.">
         <div class="card-thumb">
           <img src="images/img2.jpg" alt="Fashion Home">
         </div>
@@ -101,7 +101,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" tabindex="0" role="button" aria-label="View Church Event details" data-title="Church / Event" data-tag="Event Design" data-description="Designed a bold event graphic featuring speakers for a church programme, combining striking typography and portrait layouts that command attention.">
         <div class="card-thumb">
           <img src="images/img3.jpg" alt="Church Event">
         </div>
@@ -112,7 +112,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" tabindex="0" role="button" aria-label="View Food Business details" data-title="Food Business" data-tag="Business" data-description="Crafted a colourful promotional flyer for a daily meals and catering business, clearly communicating their menu and delivery offer.">
         <div class="card-thumb">
           <img src="images/img4.jpg" alt="Food Business">
         </div>
@@ -126,6 +126,16 @@
     </div>
   </section>
 
+  <div id="workModal" class="work-modal" aria-hidden="true">
+    <div class="work-modal-backdrop" data-close-modal="true"></div>
+    <div class="work-modal-panel" role="dialog" aria-modal="true" aria-label="Project preview">
+      <button class="work-modal-close" type="button" aria-label="Close work preview">×</button>
+      <div class="work-modal-image-wrap">
+        <img id="workModalImage" src="" alt="">
+      </div>
+    </div>
+  </div>
+
 
   <!-- ── Services ──────────────────────────────────────────────────── -->
   <section id="services-section">
@@ -133,22 +143,18 @@
     <h2 class="section-title">Services</h2>
     <div class="services-grid">
       <div class="service">
-        <div class="icon"><img src="images/logo_design (1).png" alt="Logo Design"></div>
         <h3>Logo Design</h3>
         <p>Memorable marks that capture your brand essence at a glance.</p>
       </div>
       <div class="service">
-        <div class="icon"><img src="images/branding.png" alt="Branding"></div>
         <h3>Branding</h3>
-        <p>Full brand systems   colors, fonts, voice, and visual language.</p>
+        <p>Strong identities built around colors, fonts, tone, and visual consistency.</p>
       </div>
       <div class="service">
-        <div class="icon"><img src="images/post.png" alt="Social Media"></div>
         <h3>Social Media</h3>
-        <p>Scroll-stopping content designed to grow your online presence.</p>
+        <p>Scroll-stopping posts and campaigns designed to grow your digital reach.</p>
       </div>
       <div class="service">
-        <div class="icon"><img src="images/print_design.png" alt="Print Design"></div>
         <h3>Print Design</h3>
         <p>Flyers, banners, and posters that demand attention in the real world.</p>
       </div>
