@@ -50,35 +50,32 @@ function showBookingPayment() {
     const name    = document.getElementById('clientName').value.trim();
     const email   = document.getElementById('clientEmail').value.trim();
     const service = document.getElementById('clientDesign').value;
-    console.log(service)
 
     if (!name || !email || !service) {
         alert('Please fill in all fields before proceeding.');
         return;
     }
-    
-    let amount = 0;
 
-    switch(service){
-    
-      case "Logo Design – GHS150":
-        amount = 150;
-        break;
-    
-      case "Brand Identity – GHS300":
-        amount = 300;
-        break;
-    
-      case "Social Media Design – GHS100":
-        amount = 100;
-        break;
-    
-      case "Poster Design – GHS80":
-        amount = 80;
-        break;
-    
-      default:
-        amount = 0;
+    const pricingMap = {
+        'Business Logo – GHS700': 700,
+        'Church/School Logo – GHS850': 850,
+        'Business Ad/Digital Flyers – GHS250': 250,
+        'Call Card Design Only (One Sided) – GHS200': 200,
+        'Invitation Card Design Only – GHS180': 180,
+        'Call Card Design Only (Two Sided) – GHS350': 350,
+        'Banner Design Only – GHS180': 180,
+        'Citation Design Only – GHS180': 180,
+        'Birthday Flyer Design – GHS180': 180,
+        'Music Covers – GHS180': 180,
+        'Event Flyers – GHS250': 250,
+        'Event Tickets Design Only – GHS250': 250
+    };
+
+    const amount = pricingMap[service] || 0;
+
+    if (!amount) {
+        alert('Selected service is not available in the current pricing list.');
+        return;
     }
 
     // Launch Paystack
